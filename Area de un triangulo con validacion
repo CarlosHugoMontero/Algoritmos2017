@@ -1,0 +1,23 @@
+// Nombre:Area del Triangulo
+// Autor:Carlos Hugo Montero Segurondo
+// Fecha:15/02/2017
+#include "stdafx.h"     
+#include <iostream>  
+#include "conio.h"
+using namespace std;
+
+void main()
+{
+   float area,base,altura;
+   cout<<"Ingrese base: ";
+   cin>>base;
+   cout<<"Ingrese altura: ";
+   cin>>altura;
+   if ((base<0)||(altura<0))
+	   cout<<"El calculo no se realiza con numeros negativos";
+   else{
+   area=(base*altura)/2;
+   cout<<"El area es: "<<area;
+   }
+   getch();
+}
