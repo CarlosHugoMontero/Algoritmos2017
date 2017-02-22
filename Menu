@@ -1,0 +1,63 @@
+// fyui.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+
+void main()
+
+{
+	float lado,x,b,h;
+	int opcion;
+
+	
+		cout<<"1.-Area del cuadrado"<<endl;
+		cout<<"2.-Area del triangulo"<<endl;
+		cout<<"3.-Area del rectangulo"<<endl;
+		cout<<"0.-Salir"<<endl;
+		cout<<"Elija una opcion"<<endl;
+		cin>>opcion;
+		switch(opcion)
+		{
+		case 1:
+			{
+				cout<<"Ingrese el lado"<<endl;
+				cin>>lado;
+				x=lado*lado;
+				cout<<"El resultado sera: "<<x<<endl;break;
+			}
+		case 2:
+			{
+				cout<<"Ingrese la base"<<endl;
+				cin>>b;
+				cout<<"Ingrese la altura"<<endl;
+				cin>>h;
+				x=(b*h)/2;
+				cout<<"El resultado sera: "<<x<<endl;break;
+			}
+		case 3:
+			{
+				cout<<"Ingrese la base"<<endl;
+				cin>>b;
+				cout<<"Ingrese la altura"<<endl;
+				cin>>h;
+				x=(b*h);
+				cout<<"El resultado sera: "<<x<<endl;break;
+			}
+		case 0: 
+			{
+				cout << "Gracias";break;
+			}
+    	default: cout << "Opcion invalida" << endl;
+		}
+	
+
+
+
+	getch();
+	 
+}
