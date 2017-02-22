@@ -1,0 +1,37 @@
+// fyui.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void main ()
+{
+	int edad,genero,n;
+	cout<<"Ingrese su genero 1 MASCULINO, 2 FEMENINO: "<<endl;
+	cin>>genero;
+	if (genero==1)
+	{
+		cout<<"Ingrese su edad: "<<endl;
+		cin>>edad;
+		if (edad>=65)
+			cout<<"Si puede jubilarse"<<endl;
+		else 
+			cout<<"No puede jubilarse"<<endl;
+	}
+
+	if (genero==2)
+	{
+		cout<<"Ingrese su edad: "<<endl;
+		cin>>edad;
+		cout<<"Ingrese su numero de hijos: "<<endl;
+		cin>>n;
+		if ((edad+n)>=60)
+			cout<<"Si puede jubilarse"<<endl;
+		else 
+			cout<<"No puede jubilarse"<<endl;
+	}
+	getch ();
+}
