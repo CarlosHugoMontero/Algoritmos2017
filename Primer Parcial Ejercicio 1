@@ -1,0 +1,43 @@
+// cfghjthjjdfjfg.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+
+void riesgo ( int sueldo, int historial, int moroso, int hipoteca);
+void main()
+{
+	int sueldo,historial,moroso,hipoteca;
+	cout<<"EL EL CASO DE QUE SE SU RESPUESTA SEA VERDADERA INGRESE 1 Y SI NO LO ES INGRESE 0"<<endl;
+	cout<<"Ingrese su sueldo: "<<endl;
+	cin>>sueldo;
+	cout<<"Indique si tiene historial de pagos: "<<endl;
+	cin>>historial;
+	if (historial==1)
+	{
+			cout<<"Indique si el cliente es moroso en sus pagos: "<<endl;
+			cin>>moroso;
+	}
+	cout<<"Indique cuanto paga el cliente al mes de hipoteca: "<<endl;
+	cin>>hipoteca;
+	riesgo ( sueldo, historial, moroso, hipoteca);
+	getch();
+}
+
+void riesgo ( int sueldo, int historial, int moroso, int hipoteca)
+{
+	if ( historial==1 && moroso==1 && (hipoteca>(sueldo*03)))
+		cout<<"Es un cliente de riesgo alto";
+
+	if ( historial==0 && (hipoteca<(sueldo*0.2)))
+		cout<<"Es un cliente de riesgo medio";
+	if (historial==1 && moroso==0 && (hipoteca<(sueldo*0.3)))
+		cout<<"Es un cliente de riesgo medio";
+	else 
+		cout<<"Es de riesgo bajo";
+}
+	
