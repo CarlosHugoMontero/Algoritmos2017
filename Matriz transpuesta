@@ -1,0 +1,73 @@
+// asdf.cpp : Defines the entry point for the console application.
+//
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#define MAX 10
+using namespace std;
+
+void cargar_matriz_1 ( int M1[MAX][MAX], int fil1, int col1); 
+void mostrar_matriz_1 ( int M1[MAX][MAX], int fil1, int col1);
+void transpuesta ( int M1[MAX][MAX],int M2[MAX][MAX], int fil1, int col1);
+
+void main()
+{
+	
+	int M1[MAX][MAX],M2[MAX][MAX];
+	int col1,fil1;
+	cout<<"-------------M1------------"<<endl;
+	cout<<"Escriba el numero de su fila: "<<endl;
+	cin>>fil1;
+	cout<<"Escriba el numero de columnas: "<<endl;
+	cin>>col1;
+	cout<<endl;
+	cargar_matriz_1 (  M1, fil1, col1);
+	cout<<endl;
+	mostrar_matriz_1 ( M1, fil1, col1);
+	cout<<endl;
+	transpuesta ( M1, M2,fil1,col1);
+	getch();
+}
+
+void cargar_matriz_1 ( int M1[MAX][MAX], int fil1, int col1) 
+{
+	for(int i=0; i<fil1; i++)
+		for (int j=0; j<col1; j++)
+		{
+			cout<<"M:["<<i<<"] ["<<j<<"]: ";
+			cin>>M1[i][j];
+		}
+}
+void mostrar_matriz_1 ( int M1[MAX][MAX], int fil1, int col1)
+{
+	for(int i=0; i<fil1; i++)
+	{
+		for (int j=0; j<col1; j++)
+		{
+			cout<<M1[i][j]<<"\t";
+		
+		}
+		cout<<endl;
+	}
+}
+void transpuesta ( int M1[MAX][MAX],int M2[MAX][MAX], int fil1, int col1)
+{
+	for (int i=0; i<fil1; i++)
+	{
+		for (int j=0; i<col1; i++)
+		{
+			M2[i][j]=M1[j][i];
+		}
+	}
+	cout<<"LA MATRIZ TRANSPUESTA SERA: "<<endl;
+	for (int i=0; i<fil1; i++)
+	{
+		for (int j=0; j<col1; i++)
+		{
+			cout<<M2[i][j]<<"\t";
+		}
+		cout<<endl;
+	}
+}
+
+
